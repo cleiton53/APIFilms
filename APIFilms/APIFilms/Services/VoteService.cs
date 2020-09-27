@@ -1,3 +1,4 @@
+using APIFilms.Interfaces;
 using APIFilms.Models;
 using System;
 using System.Collections.Generic;
@@ -5,7 +6,7 @@ using System.Linq;
 
 namespace APIFilms.Services
 {
-    public class VoteService
+    public class VoteService : IVoteService
     {
         private readonly Context _context;
 

@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using APIFilms.Interfaces;
 using APIFilms.Models;
 
 namespace APIFilms.Services
 {
-    public class MovieService
+    public class MovieService : IMovieService
     {
         private readonly Context _context;
 
@@ -16,6 +17,7 @@ namespace APIFilms.Services
 
         public void AddMovie(Film film)
         {
+
             List<Actor> list = new List<Actor>();
             if (film.Actors.Count == 0)
             {
@@ -38,6 +40,7 @@ namespace APIFilms.Services
 
             _context.Add(film);
             _context.SaveChanges();
+
         }
 
         public List<Film> GetMovies()
@@ -223,8 +226,8 @@ namespace APIFilms.Services
 
 
             _context.SaveChanges();
-            
-            
+
+
         }
 
         public void Clear()

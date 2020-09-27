@@ -1,10 +1,11 @@
 using System;
 using System.Linq;
+using APIFilms.Interfaces;
 using APIFilms.Models;
 
 namespace APIFilms.Services
 {
-    public class UserService
+    public class UserService : IUserService
     {
         private readonly Context _context;
 

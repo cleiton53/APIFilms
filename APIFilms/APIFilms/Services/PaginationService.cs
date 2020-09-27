@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using APIFilms.Models;
 using System.Linq;
+using APIFilms.Interfaces;
 
 namespace APIFilms.Services
 {
-    public class PaginationService
+    public class PaginationService : IPaginationService
     {
         private readonly Context _context;
 

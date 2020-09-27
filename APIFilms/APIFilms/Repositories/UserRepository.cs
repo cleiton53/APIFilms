@@ -1,3 +1,4 @@
+using APIFilms.Interfaces;
 using APIFilms.Models;
 using APIFilms.Services;
 // using APIFilms.Services;
@@ -5,7 +6,7 @@ using System.Linq;
 
 namespace APIFilms.Repositories
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
         private readonly Context _context;
 
